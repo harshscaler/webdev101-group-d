@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors</title>
+
+    <style>
+        /* 1. Universal Selector */
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* 2. Type Selector */
+        p {
+            background-color: black;
+            color: white;
+            margin : 10px;
+            border: 10px solid black;
+            padding: 30px;
+        }
+
+        /* 3. Class Selector */
+        .highlight {
+            background-color: blanchedalmond;
+            color: brown;
+        }
+
+        .box {
+            background-color: rgb(0, 0, 255);
+            color: yellow;
+        }
+
+
+        /* 4. ID Selector */
+        #unique {
+            background-color: cadetblue;
+            color: blue;
+        }
+
+
+        /* 5. Attribute Selector */
+        input[type="text"] {
+            background-color: lightblue;
+        }
+
+        input[required] {
+            background-color: lightgreen;
+        }
+
+        /* 6. Descendant Selector */
+        div p {
+            background-color: lightcoral;
+            color: white;
+        }
+
+        /* 7. Child Selector */
+        div > p {
+            background-color: lightseagreen;
+            color: white;
+        }
+
+        /* 8. Adjacent Sibling Selector */
+        h2 + h3 {
+            background-color: lightpink;
+            color: white;
+        }
+
+
+        /* 9. General Sibling Selector */
+        /* TODO */
+
+        /* 10. Pseudo-class Selector read about it more */
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+
+        /* 11. Pseudo-element Selector */
+        /* TODO */
+
+
+        /* 12. Grouping Selector */
+        h2, h3, p, div {
+            background-color: lightgray;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- 1. Universal Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>1. Universal Selector</h2>
+
+        <p>
+            The universal selector targets every element on the page.
+        </p>
+
+        <div>Every element can be selected using *</div>
+        <span>This span can also be selected using *</span>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 2. Type Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>2. Type Selector</h2>
+
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+
+        <div>This is a div element.</div>
+
+        <h3>This is a heading.</h3>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 3. Class Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>3. Class Selector</h2>
+
+        <p class="highlight box" id="unique">
+            This paragraph has the "highlight and box" class.
+        </p>
+
+        <p class="highlight">
+            This is another element with the same class.
+        </p>
+
+        <div class="box">
+            This div also has a class.
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 4. ID Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>4. ID Selector</h2>
+
+        <p id="unique">
+            This paragraph has a unique ID.
+        </p>
+
+        <span id="highlight">
+            This span has a unique ID.
+        </span>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 5. Attribute Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>5. Attribute Selector</h2>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter your password">
+
+        <br><br>
+
+        <a href="https://example.com">
+            Example Link
+        </a>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 6. Descendant Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>6. Descendant Selector</h2>
+
+        <div class="container">
+
+            <h3>Container Heading</h3>
+
+            <p>
+                This paragraph is inside the container.
+            </p>
+
+            <div class="nested">
+
+                <p>
+                    This paragraph is deeply nested.
+                </p>
+
+                <span>
+                    This span is also inside the container.
+                </span>
+
+            </div>
+
+        </div>
+
+        <p>
+            This paragraph is outside the container.
+        </p>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 7. Child Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>7. Child Selector</h2>
+
+        <div class="parent">
+
+            <p>
+                Direct child paragraph
+            </p>
+
+            <p>
+                Another direct child paragraph
+            </p>
+
+            <div>
+                <p>
+                    Nested paragraph
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 8. Adjacent Sibling Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>8. Adjacent Sibling Selector</h2>
+
+        <h3>Heading</h3>
+
+        <p>
+            I am immediately after the heading.
+        </p>
+
+        <p>
+            I am not immediately after the heading.
+        </p>
+
+        <div>
+            I am another element.
+        </div>
+
+        <p>
+            I am after the div.
+        </p>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 9. General Sibling Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>9. General Sibling Selector</h2>
+
+        <h3>Another Heading</h3>
+
+        <p>
+            Paragraph 1
+        </p>
+
+        <p>
+            Paragraph 2
+        </p>
+
+        <div>
+            A div between the paragraphs
+        </div>
+
+        <p>
+            Paragraph 3
+        </p>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 10. Pseudo-class Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>10. Pseudo-class Selector</h2>
+
+        <button>
+            Hover over me
+        </button>
+
+        <br><br>
+
+        <input type="text" placeholder="Click inside me">
+
+        <br><br>
+
+        <a href="#">
+            Hover over this link
+        </a>
+
+        <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+            <li>Fourth Item</li>
+        </ul>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 11. Pseudo-element Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>11. Pseudo-element Selector</h2>
+
+        <p class="pseudo-example">
+            This paragraph demonstrates pseudo-elements.
+        </p>
+
+        <p class="quote">
+            CSS makes HTML beautiful.
+        </p>
+    </section>
+
+
+    <hr>
+
+
+    <!-- ========================================= -->
+    <!-- 12. Grouping Selector -->
+    <!-- ========================================= -->
+
+    <section>
+        <h2>12. Grouping Selector</h2>
+
+        <h3>
+            This is a heading.
+        </h3>
+
+        <p>
+            This is a paragraph.
+        </p>
+
+        <div>
+            This is a div.
+        </div>
+    </section>
+
+</body>
+
+</html>
