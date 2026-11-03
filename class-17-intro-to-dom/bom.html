@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>BOM</h1>
+    <button id="btn" class="button">Click Me</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        console.log(btn);
+        // document.getElementsByClassName("button")
+
+        btn.addEventListener('click' , function () {
+            // console.log("Hello World");
+
+            let newElement = document.createElement("h1");
+            newElement.innerText = "Hello World";
+            
+            let body = document.querySelector("body");
+
+            body.appendChild(newElement);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+    <h1 id="count">0</h1>
+
+    <script>
+        let inc = document.getElementById("inc");
+        let dec = document.getElementById("dec");
+        let count = document.getElementById("count");
+
+        let counter = 0;
+
+        inc.addEventListener('click' , function () {
+            if(counter < 10){
+                counter++;
+                count.innerText = counter;
+            }
+        })
+
+        dec.addEventListener('click' , function () {
+            if(counter > -10){
+                counter--;
+                count.innerText = counter;
+            }
+        })
+    </script>
+</body>
+</html>
