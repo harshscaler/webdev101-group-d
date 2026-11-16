@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 class="heading">event1</h1>
+    <h2 class="heading">event2</h2>
+
+    <button id="btn" style="background-color: lightblue;">Click Me</button>
+    <button id="btn" style="background-color: lightgreen;">Click Me</button>
+
+    <script>
+        let h1 = document.querySelector(".heading");
+
+        let arr = document.querySelectorAll("#btn");
+
+        // console.log(h1);
+        // console.log(h2);
+
+        // console.log(h2[1]);
+
+        arr.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                btn.style.color = "red";
+            });
+        });
+
+    </script>
+</body>
+</html>

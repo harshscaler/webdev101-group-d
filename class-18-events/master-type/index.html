@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Type</title>
+
+    <style>
+        .word {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .letter {
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+        }
+
+        .input {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        .current {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Master Type</h1>
+
+    <div class="word">
+        <span class="letter current">S</span>
+        <span class="letter">u</span>
+        <span class="letter">p</span>
+        <span class="letter">e</span>
+        <span class="letter">r</span>
+        <span class="letter">M</span>
+        <span class="letter">a</span>
+        <span class="letter">n</span>
+    </div>
+
+    <input type="text" class="input" placeholder="Type here..." />
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
